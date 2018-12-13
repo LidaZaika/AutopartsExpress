@@ -1,0 +1,916 @@
+@font-face{
+    font-family: 'SegoeUI';
+    src:url("fonts/SegoeUI.ttf"); 
+}
+body {
+    margin: 0;
+    background-color: #1e212a;
+}
+
+
+h1 {
+    color:white;
+    font-size: 50px;
+    margin: 0%;
+    font-family: 'SegoeUI';
+    src:url("fonts/SegoeUI.ttf"); 
+    background: rgb(45, 42, 42);
+    text-align: center;
+    margin: 0%;   
+}
+h2 {
+    color:white;
+    margin: 0%;
+    font-family: 'SegoeUI';
+    src:url("fonts/SegoeUI.ttf"); 
+    font-size: 20px;
+    text-align: center;
+    margin: 0%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+h3 {
+    color:#1E212A;
+    font-size: 36px;
+    margin: 0%;
+    font-family: 'SegoeUI';
+    src:url("fonts/SegoeUI.ttf"); 
+    text-align: center;
+    padding-top: 90px;
+    
+}
+
+h5 {
+    font-size: 16px;
+    
+}
+h6 {
+    color:rgb(216, 116, 34);
+    font-size: 20px;
+    font-family: 'SegoeUI';
+    src:url("fonts/SegoeUI.ttf"); 
+    text-align: left;
+    margin: 0%; 
+}
+
+a 
+{text-decoration: none;
+}
+a:link {
+    color:  white;  /* Цвет ссылок */
+   }
+   a:visited {
+    color:  white;  /* Цвет посещенных ссылок */
+   }
+
+   a:hover {
+       color: rgb(206, 152, 64);
+   }
+    a:active {
+       color: rgb(206, 152, 64);
+   }
+p.dot {
+    border-bottom: 1px dashed #ffffff;
+    width: 145px;
+}
+header {
+    background:#1E212A;
+	width:100%;
+    height:100px;
+    font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf"); 
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    color:white;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    
+ }
+ @media (max-width: 870px)
+ {
+    header {
+      /* Меняем оси шапки, делая её вертикальной. */
+    flex-direction: column;
+      /* Выравнивание элементов шапки с начала (по левому краю). */
+    align-items: flex-start;
+    height: auto;
+    justify-content: start;
+    }
+    
+}
+@media (min-width: 1500px){
+    .header {
+    margin-left: 95px;
+    margin-right: 95px;
+    }
+}
+.menustart {
+    padding-left: 5%;
+
+}    
+@media (max-width: 870px)
+ {
+   .menustart {
+    padding-left: 0; 
+    }
+    #tel {
+        display: none;
+    }
+}
+.menustart ul {
+        margin: 0; 
+        padding: 4px;
+       }
+.menustart li {
+        display: inline;
+        margin-right: 5px; 
+        padding: 3px; 
+       }
+
+.logotip {
+    padding-right: 220px;
+    position: relative;
+}
+.logotip ul {
+    list-style-type: none;
+    
+}
+#logo {
+    font-family: Baumans, cursiv;
+    font-size: 36px;
+    text-align: center;
+}
+#logo2 {
+text-align: center;
+font-size: 16px;
+}
+#Bag {
+padding-right: 5%;  
+
+}
+
+.about {
+    background: #1e212a;
+    display: flex;
+	justify-content: space-between;
+	height: 410px;
+    margin: auto;
+    padding: 0;
+    position: relative;
+  
+}
+@media (min-width: 1500px){
+    .about {
+    margin-left: 95px;
+    margin-right: 95px;
+    }
+}
+ 
+.about p {
+    background:linear-gradient(to right, #1e212a, #ce9840 75%);
+    color:white;
+    font-size: 26px;
+    margin: 0%;
+    font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf"); 
+    text-align: left;
+    padding-left: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    line-height: 2;
+}
+.about > div {
+	
+	width: 50%;
+    height: 400px;
+}
+p {
+    color:white;
+    font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf"); 
+    
+}
+form {
+    display: block;
+    width: 45%;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 1%;
+    padding-left: 5%;
+}
+
+/* Стили секций с содержанием */
+.tabs>section {
+	display: none;
+	
+}
+.tabs>section>p {
+	margin: 0 0 5px;
+	line-height: 1.5;
+	color: #383838;
+	-webkit-transform:none;
+}
+
+/* Прячем чекбоксы */
+.tabs>input {
+	display: none;
+	position: absolute;
+}
+/* Стили переключателей вкладок (табов) */
+.tabs>label {
+    display: inline-block;
+    padding: 0;
+	margin: 0 0 -1px;
+    font-size: 18px;
+    font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf"); 
+	text-align: center;
+	color: #aaa;
+	border: 0px solid #ddd;
+	border-width: 1px 1px 1px 1px;
+	background: #f1f1f1;
+    width: 30%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-left: 2%;
+    -webkit-transform: perspective(100px) rotateX(30deg);
+}
+
+/* Шрифт-иконки от Font Awesome в формате Unicode */
+.tabs>label:before {
+	font-weight: normal;
+	margin-right: 10px;
+}
+
+/* Изменения стиля переключателей вкладок при наведении */
+ 
+.tabs>label:hover {
+	color: #888;
+	cursor: pointer;
+}
+/* Стили для активной вкладки */
+.tabs>input:checked+label {
+	color: #555;
+	border-top: 1px solid #ce9840;
+	border-bottom: 1px solid #fff;
+	background: #fff;
+}
+/* Активация секций с помощью псевдокласса :checked */
+#tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
+	display: block;
+}
+
+
+.content-tab>input {
+    position: relative;
+    background-image: url('images/lupa.png');  
+    background-repeat: no-repeat;  
+    background-size: 2%;
+    background-position: 97%;
+    width: 200%;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.carousel-wrapper{
+    position:relative;
+}
+.carousel-item  {
+    font-family: 'SegoeUI';
+    src:url("fonts/SegoeUI.ttf"); 
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:25px 50px;
+    opacity:0;
+    transition:all0.5 sease-in-out;
+    background-color: #6a6b6d;
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+
+}
+.carousel-item ul {
+    list-style-type: none;
+}
+.carousel-item p {
+    font-size: 18px;
+    text-align: center;
+}
+.light {
+    background-color: rgb(206, 152, 64);
+}
+.arrow{
+    position:absolute;
+    top:0;
+    display:block;
+    width:50px;
+    height:100%;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    background:url("images/arrow.png")50% 50%/20px no-repeat;
+     
+}
+.arrow.arrow-prev{
+    left:0;
+  
+}   
+.arrow.arrow-next{
+    right:0;
+    transform:rotate(180deg);
+}
+          
+@media(max-width:480px){
+    .arrow,&.light.arrow{
+    background-size:10px;
+    background-position:10px 50%;
+    }
+}
+        
+   
+[id^="target-item"]{
+    display:none;
+}
+       
+.item-1{
+    z-index:2;
+    opacity:1;
+}
+     
+   
+*:target~.item-1{ 
+    opacity:0;
+}
+     
+    
+#target-item-1:target~.item-1{
+    opacity:1;
+}
+     
+#target-item-2:target~.item-2,#target-item-3:target~.item-3{
+    z-index:3;
+    opacity:1;
+}
+.img-carousel {
+    margin-left: 25px;
+}
+.backround {
+     background:#1E212A url(images/Фон.png) no-repeat center center;
+     background-size: 100%;
+}
+.ST-all {
+    
+    padding-top: 20px;   
+}
+.ST-all> div {
+    min-height: 735px;
+    height: auto;
+    
+}
+.ST {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        display: flex;
+        height: 800px;
+        padding-right: 50px;
+        padding-left: 50px;
+        
+    }
+.ST > div {
+        
+        width: 375px;
+        height: 205px;
+        margin: 20px;
+        background:rgb(247, 247, 247);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'SegoeUI';
+        src:url("fonts/SegoeUI.ttf");
+        line-height: 1.5;
+}
+
+    
+ul {
+        display: inline;
+}
+.STblock {
+    margin: 3px;
+    width: 100%;  
+}
+.text {
+    width: 40%;
+    padding-left: 10%;
+    cursor: pointer;
+ }
+ .text >h6 {
+     color: rgb(216, 116, 34);
+ }
+ .foto {
+    width: 50%;
+    text-align: center;
+ }
+
+
+.fotovbloke {
+    background-image:url(/images/фото8.png);
+}
+    
+.letter {
+    color:rgb(206, 152, 64);
+    margin-left: -30px;
+    position: absolute;
+    font-weight: bold;
+    }
+.carblock {
+    padding: 25px;
+    }
+.listcar {
+    padding-top: 40px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 15%;
+}
+    @media (max-width: 700px) {   
+   
+        .listcar {
+        padding-left: 0;
+        padding-right: 0;
+       }
+   }
+    .brand {
+        list-style: none;
+    }
+    .top {
+        
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+     
+      
+    }
+.footer-line {
+    border-top: 15px solid rgb(206, 152, 64);
+}
+.footer {
+    
+    background: rgb(30, 33, 42);
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    grid-template-rows: 250px 150px;
+}
+@media (min-width: 1500px){
+
+    .footer {
+    margin-left: 95px;
+    margin-right: 95px;
+    }
+}
+.socseti {
+   display: block;
+   grid-column-start: 2;
+   grid-row-start: 2;
+   text-align: left;
+   padding-left: 80px;
+}
+.join {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    text-align: left;
+    color: white;
+    font-family: 'SegoeUI';
+    src:url("fonts/SegoeUI.ttf");
+    padding-left: 80px;
+}
+  
+.footer-menu {
+    color: white;
+    font-family: 'SegoeUI';
+    src:url("fonts/SegoeUI.ttf"); 
+     
+}
+&:right {
+   grid-column-start: 1;
+   grid-row-start: 1;
+   
+}
+&:left {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    
+}
+.footer-menu > a {
+    color: white;
+    font-family: 'SegoeUI';
+    src:url("fonts/SegoeUI.ttf"); 
+    line-height: 2;
+   
+}
+.footer-menu > a:hover {
+    color: rgb(206, 152, 64);
+}
+
+.frame {
+    grid-column-start: 3;
+}
+.left {
+    text-align: left;
+    padding-top: 125px;
+    padding-left: 80px;
+}
+.right {
+    text-align: left;
+    padding-left: 65%;
+    padding-top: 55px;
+}
+
+    
+    .right {
+        padding-left: 80px;
+    }
+
+
+
+/*Разделы */
+
+@media (max-width: 1500px) {   
+   
+    .section {
+    padding-left: 0;
+    padding-right: 0;
+   }
+}
+.section {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: #ce9840;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.menu-section {
+    
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+}
+.section h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    text-align: left;
+    color: white;
+    padding-bottom: 3px;
+    font-weight: normal;
+
+}
+.section p {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+}
+.page {
+    color: white;
+    padding-top: 20px;
+    font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf"); 
+}
+.page> 
+    a:hover {
+        color: rgb(3, 3, 3);
+        cursor: pointer; 
+    }
+
+.price-all {
+    height: auto;
+    background: linear-gradient(to right, #8b8c8f,#1e212a 80%);
+    position: relative;
+}
+.menu-horizontal {
+    padding-top: 45px;
+    padding-left: 5%;
+    padding-right: 5%;
+    color:white;
+    font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf"); 
+}
+@media (max-width: 1265px) {   
+    .menu-horizontal {
+    display: none;
+   }
+}
+.menu-horizontalalt {
+    display: none;
+    padding-left: 5%;
+    padding-top: 3%;
+}
+.menu-horizontalalt > span {
+    color:white;
+    font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf"); 
+}
+@media (max-width: 1265px) {   
+    .menu-horizontalalt {
+    display: block;
+   }
+}
+.menu-sort {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 230px;
+    margin-top: -15px;
+}
+.sort-layout {
+    display: inherit;
+    cursor: pointer;
+}
+.sort-all li {
+    display: inline;
+}
+.sort li{
+    display: inline;
+    list-style-type: none;
+    cursor: pointer;
+}
+.hamburger-menu p {
+    padding: 0;
+    margin: 0;
+}
+.price {
+    padding-right: 65px;
+    display: flex;
+}
+.vertical {
+    width: 15%;
+}
+.hamburger-menu {
+    display: flex;
+}
+
+.price-range {
+    padding-top: 20%;
+}
+.characteristic-OIL {
+    padding-top: 17%;
+    cursor: pointer;
+}
+
+.filters-reset {
+    border: 4px solid #ce9840;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20%;
+    cursor: pointer;
+}
+.selection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 35%;
+    padding-top: 20px;
+}
+
+.name-maker {
+    margin-left: 5px;
+    line-height: 2;
+}
+.maker p {
+    color: white;
+}
+
+input[type="checkbox"] {
+    
+}
+.SAE {
+    color: white;
+}
+.sae2, .acea2 {
+    display: none;
+    color:white;
+    font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf");
+}
+.sae2b, .acea2n{
+    display: none;
+}
+.sae2n, .acea2b{
+    display: block;
+}
+
+#box-8, #one {
+    display: none;
+}
+.dot{
+    cursor: pointer;
+}
+
+.oil {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    padding-left: 11%;
+    padding-top: 50px;
+    
+}
+.oil > div {
+    width: 208px;
+    height: 350px;
+    margin: 18px;
+    margin-left: 0;
+    margin-top: 0;
+    background:rgb(243, 245, 226);
+    padding-left: 1%;
+} 
+.oil>div:hover {
+        border: 3px solid #ce9840; 
+    
+}   
+.oildiv {
+    list-style-type: none;
+    padding-left: 10px;
+}
+.oilcatalog {
+    display: flex;
+    justify-content: left;
+    list-style-type: none;
+    
+} 
+.oilfoto {
+    text-align: center;
+}
+
+.oiltxt, .oiltxt2, .oiltxt3, .oiltxt4{
+   font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf");
+}
+.oiltxt {
+     line-height: 2;
+}
+.oiltxt2, .oiltxt3, .oiltxt4 {
+    color: #2c2c2c;
+    line-height: 1.8;
+    font-size: 14px;
+}
+.oiltxt4 {
+    font-size: 20px;
+}
+.pages {
+    padding-left: 27%;
+    padding-bottom: 3%;
+    cursor: pointer;
+}
+
+
+/* Корзина */
+
+.article {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 10%;
+    margin-bottom: 2px;
+    font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf");
+    
+}
+.articles{
+    padding-left: 5%;
+    background: white;
+    font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf");
+    padding-top: 20px;
+}
+.labelarticle0 {
+    vertical-align: super;
+}
+.articles > input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+}
+.article1 > input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+}
+.sale {
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+}
+#name-article {
+    text-align: left;
+}
+#vetind, #vetind2, #vetind3 {
+    text-align: center;
+    width: 30px;
+    font-size: 28px;
+    border: 0;
+} 
+.order {
+    height: 370px;
+    background:linear-gradient(to right, #ce9840,#1e212a 50% );
+    padding: 0;
+    margin: 0;
+    padding-left: 15%;
+    padding-top: 4%;
+    display: flex;
+    justify-content: start;
+
+}
+.orderbtn {
+    padding-left: 20%;
+    padding-top: 2%;
+}
+.orderbtn>button {
+    height: 40px;
+    width: 165px;
+    background-color: white;
+    border-color: #ce9840;
+    color: #ce9840;
+    cursor: pointer;
+}
+.products {
+    background-color: white;
+    margin-top: -2px;
+    height: 70px;
+    padding-left: 710px;
+    font-size: 24px;
+    font-family: 'SegoeUI';
+    src:url("../fonts/SegoeUI.ttf");
+    display: flex;
+    justify-content: space-between;
+    padding-right: 180px;
+}
+@media (max-width: 1160px){
+   
+    .products{
+    padding-left: 409px;
+    padding-right: 146px;
+    }
+    
+}
+.summa {
+    padding-left: 35px;
+}
+#sum {
+    margin-left: 12px;
+}
+#amount {
+    padding-right: 136px;
+}
+@media (max-width: 1160px){
+    #amount {
+    padding-right: 0px;
+    }
+}
+#amount, #sum {
+    text-align: center;
+    font-size: 24px;
+    border: 0;
+}
+.psk {
+    position: absolute;
+    margin-left: 61%;
+    margin-top: -75px;
+}
+.btn {
+    background-color: white;
+    border: 0;
+}
+.psk >input {
+    width: 175%;
+    padding-left: 12%;
+    height: 45px;
+    background-image: url('images/lupa.png');  
+    background-repeat: no-repeat;  
+    background-size: 8%;
+    background-position: 97%;
+}
+/* Страница товара */
+
+.characteristic {
+    background-color: white;
+    padding: 40px;
+}
+.productspage {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'SegoeUI';
+    src: url(../fonts/SegoeUI.ttf);
+}
+.characteristic > h4 {
+    padding: 10%;
+    text-align: center;
+}
