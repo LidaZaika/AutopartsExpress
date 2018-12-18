@@ -828,6 +828,7 @@ ul {
     background:rgb(243, 245, 226);
     padding-left: 1%;
     border: 3px solid rgb(243, 245, 226);
+    cursor: pointer;
 } 
 .oil>div:hover {
         border: 3px solid #ce9840; 
