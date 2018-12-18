@@ -1,13 +1,11 @@
 @font-face{
     font-family: 'SegoeUI';
-    src:url("fonts/SegoeUI.ttf"); 
+    src:url("fonts/SegoeUI.ttf");
 }
 body {
     margin: 0;
     background-color: #1e212a;
 }
-
-
 h1 {
     color:white;
     font-size: 50px;
@@ -86,6 +84,7 @@ header {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    position: relative;
     
  }
  @media (max-width: 870px)
@@ -110,10 +109,10 @@ header {
     padding-left: 5%;
 
 }    
-@media (max-width: 870px)
+@media (max-width: 900px)
  {
    .menustart {
-    padding-left: 0; 
+    display: none;
     }
     #tel {
         display: none;
@@ -146,6 +145,26 @@ header {
 text-align: center;
 font-size: 16px;
 }
+@media (max-width: 900px)
+ {
+    #logo2, #Bag {
+        display: none;
+    }
+    #logo {
+       font-size: 30px; 
+    }
+}
+.hamburger-menu-header{
+    position: absolute;
+    right: 0;
+    top: 15%;
+}
+@media (min-width: 900px)
+ {
+    .hamburger-menu-header{
+        display: none;
+    }
+}
 #Bag {
 padding-right: 5%;  
 
@@ -167,6 +186,16 @@ padding-right: 5%;
     margin-right: 95px;
     }
 }
+@media (max-width: 880px){
+    .about {
+        height: auto;
+    }
+}
+@media (max-width: 880px){
+    .imgAbout {
+    display: none;
+    }
+}
  
 .about p {
     background:linear-gradient(to right, #1e212a, #ce9840 75%);
@@ -181,11 +210,23 @@ padding-right: 5%;
     padding-bottom: 1%;
     line-height: 2;
 }
+@media (max-width: 880px){
+    .about p {
+   font-size: 18px;
+    }
+}
 .about > div {
 	
 	width: 50%;
     height: 400px;
 }
+@media (max-width: 880px){
+    .about > div{
+    width: auto;
+    height: auto;
+}
+}
+
 p {
     color:white;
     font-family: 'SegoeUI';
@@ -200,6 +241,11 @@ form {
     padding-bottom: 1%;
     padding-left: 5%;
 }
+@media (max-width: 880px){
+    form{
+        display: none;
+    }
+}
 
 /* Стили секций с содержанием */
 .tabs>section {
@@ -210,7 +256,7 @@ form {
 	margin: 0 0 5px;
 	line-height: 1.5;
 	color: #383838;
-	-webkit-transform:none;
+	transform:none;
 }
 
 /* Прячем чекбоксы */
@@ -235,7 +281,7 @@ form {
     padding-top: 12px;
     padding-bottom: 12px;
     margin-left: 2%;
-    -webkit-transform: perspective(100px) rotateX(30deg);
+    transform: perspective(100px) rotateX(30deg);
 }
 
 /* Шрифт-иконки от Font Awesome в формате Unicode */
@@ -277,6 +323,11 @@ form {
 
 .carousel-wrapper{
     position:relative;
+}
+@media (max-width: 700px){
+    .carousel-wrapper {
+   display: none;
+    }
 }
 .carousel-item  {
     font-family: 'SegoeUI';
@@ -325,7 +376,7 @@ form {
 }
           
 @media(max-width:480px){
-    .arrow,&.light.arrow{
+    .arrow,.light.arrow{
     background-size:10px;
     background-position:10px 50%;
     }
@@ -415,10 +466,19 @@ ul {
     width: 50%;
     text-align: center;
  }
-
+ @media (max-width: 880px){
+    .foto {
+    display: none;
+    }
+}
 
 .fotovbloke {
     background-image:url(/images/фото8.png);
+}
+@media (max-width: 880px){
+    .fotovbloke {
+    display: none;
+    }
 }
     
 .letter {
@@ -443,8 +503,12 @@ ul {
         .listcar {
         padding-left: 0;
         padding-right: 0;
+        display: block;
+        text-align: center;
+        padding-top: 0;
        }
    }
+
     .brand {
         list-style: none;
     }
@@ -465,11 +529,18 @@ ul {
     grid-template-columns: 20% 30% 50%;
     grid-template-rows: 250px 150px;
 }
+
 @media (min-width: 1500px){
 
     .footer {
     margin-left: 95px;
     margin-right: 95px;
+    }
+}
+@media (max-width: 880px){
+
+    .footer {
+    display: block;
     }
 }
 .socseti {
@@ -495,16 +566,23 @@ ul {
     src:url("fonts/SegoeUI.ttf"); 
      
 }
-&:right {
+:right {
    grid-column-start: 1;
    grid-row-start: 1;
    
 }
-&:left {
+
+:left {
     grid-column-start: 2;
     grid-row-start: 1;
     
 }
+@media (max-width: 880px){
+  .left{
+    display: none;
+    }
+}
+
 .footer-menu > a {
     color: white;
     font-family: 'SegoeUI';
@@ -519,6 +597,11 @@ ul {
 .frame {
     grid-column-start: 3;
 }
+@media (max-width: 880px){
+    .frame {
+    display: none;
+    }
+}
 .left {
     text-align: left;
     padding-top: 125px;
@@ -529,7 +612,11 @@ ul {
     padding-left: 65%;
     padding-top: 55px;
 }
-
+@media (max-width: 880px){
+    .right{
+      padding-top: 0px;
+      }
+  }
     
     .right {
         padding-left: 80px;
@@ -538,14 +625,6 @@ ul {
 
 
 /*Разделы */
-
-@media (max-width: 1500px) {   
-   
-    .section {
-    padding-left: 0;
-    padding-right: 0;
-   }
-}
 .section {
     color: white;
     display: flex;
@@ -554,6 +633,13 @@ ul {
     background-color: #ce9840;
     padding-left: 5%;
     padding-right: 5%;
+}
+@media (max-width: 880px) {   
+   
+    .section {
+    padding-left: 0;
+    padding-right: 0;
+   }
 }
 .menu-section {
     
@@ -578,6 +664,14 @@ ul {
     margin: 0;
     font-size: 15px;
 }
+@media (max-width: 1265px) {   
+    .section p {
+    display: none;
+   }
+   .page{
+       font-size: 10px;
+   }
+}
 .page {
     color: white;
     padding-top: 20px;
@@ -589,11 +683,23 @@ ul {
         color: rgb(3, 3, 3);
         cursor: pointer; 
     }
-
 .price-all {
     height: auto;
     background: linear-gradient(to right, #8b8c8f,#1e212a 80%);
     position: relative;
+}
+.hamburger-menu-catalog{
+    position: fixed;
+    margin-top: 5%;
+    right: 5%;
+    color: white;
+    background: #ce9840;
+    border-radius: 5px;
+}
+@media (min-width: 1265px) {   
+    .hamburger-menu-catalog {
+    display: none;
+   }
 }
 .menu-horizontal {
     padding-top: 45px;
@@ -652,6 +758,11 @@ ul {
 .vertical {
     width: 15%;
 }
+@media (max-width: 1265px) {   
+    .vertical {
+    display: none;
+   }
+}
 .hamburger-menu {
     display: flex;
 }
@@ -688,25 +799,10 @@ ul {
     color: white;
 }
 
-input[type="checkbox"] {
-    
-}
+
 .SAE {
     color: white;
 }
-.sae2, .acea2 {
-    display: none;
-    color:white;
-    font-family: 'SegoeUI';
-    src:url("../fonts/SegoeUI.ttf");
-}
-.sae2b, .acea2n{
-    display: none;
-}
-.sae2n, .acea2b{
-    display: block;
-}
-
 #box-8, #one {
     display: none;
 }
@@ -719,18 +815,19 @@ input[type="checkbox"] {
     flex-direction: row;
     justify-content: center;
     display: flex;
-    padding-left: 11%;
-    padding-top: 50px;
+    margin-left: 11%;
+    margin-top: 50px;
     
 }
 .oil > div {
-    width: 208px;
+    width: 204px;
     height: 350px;
     margin: 18px;
     margin-left: 0;
     margin-top: 0;
     background:rgb(243, 245, 226);
     padding-left: 1%;
+    border: 3px solid rgb(243, 245, 226);
 } 
 .oil>div:hover {
         border: 3px solid #ce9840; 
@@ -771,7 +868,6 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-
 /* Корзина */
 
 .article {
@@ -793,6 +889,29 @@ input[type="checkbox"] {
     src:url("../fonts/SegoeUI.ttf");
     padding-top: 20px;
 }
+@media (max-width: 880px){
+    .articles {
+    padding-left: 0;
+    padding-right: 0;
+    }
+    .article {
+    padding-left: 0;
+    padding-right: 0;
+    }
+    .imgarticle {
+    width: 16%;
+    }
+    
+}
+@media (max-width: 880px){
+    .imgarticle>img {
+    width: 70%;
+    }
+    .input {
+       width: 20px; 
+    }
+}
+
 .labelarticle0 {
     vertical-align: super;
 }
@@ -804,6 +923,14 @@ input[type="checkbox"] {
     width: 24px;
     height: 24px;
 }
+@media (max-width: 880px){
+    .articles > input[type="checkbox"]{
+    width: 12px;
+    }
+    .article1 > input[type="checkbox"]{
+    width: 12px;
+    }
+}
 .sale {
     font-size: 28px;
     font-family: Arial, Helvetica, sans-serif;
@@ -812,12 +939,36 @@ input[type="checkbox"] {
 #name-article {
     text-align: left;
 }
+
+@media (max-width: 880px){
+    #name-article {
+        font-size: 12px;
+        width: 178px;
+    }
+    .depot {
+        display: none;
+    }
+    .sale{
+        font-size: 12px;
+    }
+    .number{
+        display: flex;
+        font-size: 12px;
+    }
+}
 #vetind, #vetind2, #vetind3 {
     text-align: center;
     width: 30px;
     font-size: 28px;
     border: 0;
 } 
+@media (max-width: 880px){
+     #vetind, #vetind2, #vetind3{
+        font-size: 12px;
+        width: 6px;
+    }
+    
+}
 .order {
     height: 370px;
     background:linear-gradient(to right, #ce9840,#1e212a 50% );
@@ -828,6 +979,12 @@ input[type="checkbox"] {
     display: flex;
     justify-content: start;
 
+}
+@media (max-width: 880px){
+     .order{
+        display: block;
+    }
+    
 }
 .orderbtn {
     padding-left: 20%;
@@ -853,14 +1010,19 @@ input[type="checkbox"] {
     justify-content: space-between;
     padding-right: 180px;
 }
-@media (max-width: 1160px){
+@media (max-width: 1220px){
    
     .products{
-    padding-left: 409px;
-    padding-right: 146px;
+        padding-left: 92px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-around;
+        padding-top: 5%;
+        padding-right: 0px;
+    }
     }
     
-}
+
 .summa {
     padding-left: 35px;
 }
@@ -870,7 +1032,7 @@ input[type="checkbox"] {
 #amount {
     padding-right: 136px;
 }
-@media (max-width: 1160px){
+@media (max-width: 880px){
     #amount {
     padding-right: 0px;
     }
@@ -885,6 +1047,11 @@ input[type="checkbox"] {
     margin-left: 61%;
     margin-top: -75px;
 }
+@media (max-width: 880px){
+    .psk {
+        margin-left: 35%;
+    }
+}
 .btn {
     background-color: white;
     border: 0;
@@ -897,6 +1064,12 @@ input[type="checkbox"] {
     background-repeat: no-repeat;  
     background-size: 8%;
     background-position: 97%;
+}
+@media (max-width: 880px){
+    .psk >input{
+        width: 80%;
+        padding-left: 10%;
+    }
 }
 /* Страница товара */
 
